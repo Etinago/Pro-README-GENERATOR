@@ -25,15 +25,18 @@ rl.question('Enter the title of your project: ', (title) => {
         rl.question('Enter contribution guidelines: ', (contributing) => {
           sections.push(`## Contributing\n${contributing}\n\n`);
 
-          rl.question('Enter the project license: ', (license) => {
-            sections.push(`## License\nThis project is licensed under the ${license} License.\n\n`);
+          r1.question('Enter the testing information requirements: ', (tests) => {
+            section.push(`## Tests\n${Tests}\n\n`);
 
-            // Create the table of contents using map function
+            rl.question('Enter the project license: ', (license) => {
+              sections.push(`## License\nThis project is licensed under the ${license} License.\n\n`);
+
+            // Creating the table of contents using map function
             const tableOfContents = sections.map((section) => {
               
               
               
-              // Extract section header
+              // Extracting section header
               const sectionHeader = section.match(/## (.+?)\n/);
               if (sectionHeader) {
                 return `- [${sectionHeader[1]}](#${sectionHeader[1].toLowerCase().replace(/ /g, '-')})`;
@@ -48,6 +51,7 @@ rl.question('Enter the title of your project: ', (title) => {
               if (err) throw err;
               console.log('README.md file has been created successfully.');
               rl.close();
+            });
             });
           });
         });
