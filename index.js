@@ -10,8 +10,9 @@ rl.question('Enter the title of your project: ', (title) => {
   rl.question('Enter a description of your project: ', (description) => {
     rl.question('Enter installation instructions: ', (installation) => {
       rl.question('Enter usage information: ', (usage) => {
-        rl.question('Enter contribution guidelines: ', (contributing) => {
-          rl.question('Enter the project license: ', (license) => {
+        rl.question('Enter Links to GitHub repository: ', (Links) => {
+          rl.question('Enter contribution guidelines: ', (contributing) => {
+            rl.question('Enter the project license: ', (license) => {
             const readmeContent = `
 # ${title}
 
@@ -22,6 +23,9 @@ ${installation}
 
 ## Usage
 ${usage}
+
+## Links
+${Links}
 
 ## Contributing
 ${contributing}
@@ -34,10 +38,11 @@ This project is licensed under the ${license} License.
 **Note:** This is a generated README.md file.
 `;
 
-            fs.writeFile('README.md', readmeContent, (err) => {
-              if (err) throw err;
-              console.log('README.md file has been created successfully.');
-              rl.close();
+              fs.writeFile('README.md', readmeContent, (err) => {
+                if (err) throw err;
+                console.log('README.md file has been created successfully.');
+                rl.close();
+              });
             });
           });
         });

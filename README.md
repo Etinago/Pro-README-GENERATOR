@@ -1,12 +1,15 @@
 
-# Automatic Readme Generator 
+# Auto
 
-This project allows the user to generate a READme File using node js within term by prompting user to answer a few questions.
+q
 
 ## Installation
-Inorder to use this application download the repository and make sure the index.js in the root path of your folder. To run just type node js. NB: You should have a version of node downloaded 
+q
 
 ## Usage
+q
+
+## Links
 q
 
 ## Contributing
